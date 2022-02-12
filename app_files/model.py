@@ -11,8 +11,10 @@ y=dataset.iloc[:,3].values
 
 ###### START CODE HERE##############################
 #define ANY regression Model here
-reg=### Define Model
+from sklearn.tree import DecisionTreeRegressor
+reg=DecisionTreeRegressor(max_depth=5)
 reg.fit(X,y)
+y_pred=reg.predict(X)
 print(reg.score)
 #######################################END here
 
